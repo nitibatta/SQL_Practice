@@ -1,0 +1,12 @@
+Coalesce: coalesce() takes a list of values are returns the first non-null value (or null if all values are null).
+NULLIF() takes two values and returns the first value, except it returns null if both values are equal.
+
+
+Link to study NullIF and Coalesce:
+http://weblogs.sqlteam.com/jeffs/archive/2007/09/27/sql-nullif-function.aspx
+
+Solution: 
+Select id, COALESCE(NULLIF(name,''),'Product name not found')as name ,price,
+COALESCE (NULLIF(card_name,''),'card name not found')as card_name,card_number,
+transaction_date
+from eusales where price>50 order by id asc;
