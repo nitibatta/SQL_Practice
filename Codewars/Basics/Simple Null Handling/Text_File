@@ -1,3 +1,6 @@
+Kata link: http://www.codewars.com/kata/sql-basics-simple-null-handling/train/sql
+
+
 For this challenge you need to create a SELECT statement, 
 this select statement must have NULL handling, using COALESCE and NULLIF.
 
