@@ -1,0 +1,16 @@
+
+Kata link:http://www.codewars.com/kata/sql-basics-simple-full-text-search/train/sql
+Solution link: http://www.codewars.com/kata/581676828906324b8b00059e/solutions/sql
+
+
+For this challenge you need to create a simple SELECT statement. 
+Your task is to create a query and do a FULL TEXT SEARCH. 
+You must search the product table on the field name for the word Awesome and return each row with the given word. 
+Your query MUST contain to_tsvector and to_tsquery PostgreSQL functions.
+
+Tables and relationship below:
+
+Product table schema: 
+1) ID
+2) Name
+3) Price
