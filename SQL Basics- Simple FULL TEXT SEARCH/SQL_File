@@ -1,0 +1,14 @@
+SQL Basics: Simple FULL TEXT SEARCH
+
+FUll text search link:
+https://www.compose.com/articles/mastering-postgresql-tools-full-text-search-and-phrase-search/
+
+To_tsvector: IS used to convert the field or table to vector which is easy to search. 
+It ignores the conjuctions and the words that carry less meanings.
+Then it gives the position number to each word in the vector by which it is easy to search the text.
+
+To_tsquery: It is used to search for a word or phrase in the vector. 
+
+Query: 
+SELECT ID,PRICE,NAME 
+FROM PRODUCT WHERE to_tsvector(NAME) @@to_tsquery('Awesome');
