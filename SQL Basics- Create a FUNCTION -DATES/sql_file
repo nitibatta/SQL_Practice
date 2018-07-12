@@ -1,0 +1,6 @@
+This is in postgresql9.6
+
+Create function agecalculator(agee date)
+returns double precision as $$
+select extract (year from (age(current_date, agee))) as years;
+ $$ language sql;  
