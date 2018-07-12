@@ -1,0 +1,5 @@
+To get the bit length of the string BIT_LENGTH function is used or we can calculate the length and multiply by 8.
+
+
+SELECT BIT_LENGTH(NAME)+LENGTH(RACE) AS CALCULATION 
+FROM DEMOGRAPHICS;
