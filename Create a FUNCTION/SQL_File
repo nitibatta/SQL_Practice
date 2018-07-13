@@ -6,3 +6,11 @@ CREATE FUNCTION INCREMENT(num INTEGER)
 RETURNS BOOLEAN AS $$
 SELECT num =num+1;
 $$ LANGUAGE SQL;
+
+Another solution: Because the return type mentioned in the above solution is BOOLEAN which is wrong. It should be integer:
+
+CREATE FUNCTION increment(value integer) RETURNS integer AS $$
+BEGIN
+  RETURN value + 1;
+END;
+$$ LANGUAGE plpgsql;
