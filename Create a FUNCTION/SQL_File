@@ -1,0 +1,8 @@
+ Create a FUNCTION: 
+ 
+ Function to be created in postresql9.6 
+ 
+CREATE FUNCTION INCREMENT(num INTEGER)
+RETURNS BOOLEAN AS $$
+SELECT num =num+1;
+$$ LANGUAGE SQL;
