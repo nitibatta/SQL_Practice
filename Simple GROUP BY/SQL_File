@@ -1,0 +1,9 @@
+
+Simple group by query : 
+Few things to keep in mind while using group by clause:
+1) the fields that are in select statement must be included in the group by clause or should be used with aggregate functions.
+2) We can exclude the ones that are in aggregate function to be in the group by clause.
+
+Query: 
+SELECT AGE,COUNT(NAME) AS people_count 
+FROM people GROUP BY age;
