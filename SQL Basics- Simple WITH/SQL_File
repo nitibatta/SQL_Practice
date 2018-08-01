@@ -1,0 +1,13 @@
+WITH special_sales AS (
+  SELECT 
+    * 
+  FROM sales 
+  WHERE price > 90.00
+)
+SELECT 
+  departments.id, departments.name
+FROM departments 
+WHERE 
+  departments.id IN (SELECT department_id FROM special_sales);
+
+
