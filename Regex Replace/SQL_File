@@ -1,0 +1,28 @@
+select project,commits,contributors,
+case 
+    when address like '%1%' then REGEXP_REPLACE(address,'[[:digit:]]','!','g')
+    when address like '%2%' then REGEXP_REPLACE(address,'[[:digit:]]','!','g')
+    when address like '%3%' then REGEXP_REPLACE(address,'[[:digit:]]','!','g') 
+    when address like '%4%' then REGEXP_REPLACE(address,'[[:digit:]]','!','g')
+   when address like '%5%' then REGEXP_REPLACE(address,'[[:digit:]]','!','g')
+   when address like '%6%' then REGEXP_REPLACE(address,'[[:digit:]]','!','g')
+   when address like '%7%' then REGEXP_REPLACE(address,'[[:digit:]]','!','g')
+   when address like '%8%' then REGEXP_REPLACE(address,'[[:digit:]]','!','g')
+   when address like '%9%' then REGEXP_REPLACE(address,'[[:digit:]]','!','g')
+ end
+ address
+from repositories;
+
+
+Comments: 
+When I was using replace instead of regexp_replace then it was replacing only the first one and the others.
+For ex: 12xQ3wUQ5DZrxchAA98HauAAqDEvtSpmNV
+
+In this above string it was replacing only 1 with ! and not 2 and others.
+So by using 'g' it replaces  all numbers with ! and not just the first one.
+
+
+
+
+
+
