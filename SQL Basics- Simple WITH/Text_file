@@ -1,0 +1,46 @@
+Kata link: https://www.codewars.com/kata/sql-basics-simple-with/train/sql
+Solution Link: https://www.codewars.com/kata/5811501c2d35672d4f000146/solutions/sql
+
+
+
+
+For this challenge you need to create a SELECT statement, this SELECT statement will use an IN to check whether a department has had a sale with a price over 90.00 dollars BUT the sql MUST use the WITH statement which will be used to select all columns from sales where the price is greater than 90.00, you must call this sub-query special_sales.
+
+departments table schema
+id
+name
+sales table schema
+id
+department_id (department foreign key)
+name
+price
+card_name
+card_number
+transaction_date
+resultant table schema
+id
+name
+NOTE: Your solution should use pure SQL. Ruby is used within the test cases to do the actual testing.
+
+
+
+
+SQL With Clause: 
+
+The SQL WITH clause was introduced by Oracle in the Oracle 9i release 2 database. The SQL WITH clause allows you to give a sub-query block a name (a process also called sub-query refactoring), which can be referenced in several places within the main SQL query. The name assigned to the sub-query is treated as though it was an inline view or table. The SQL WITH clause is basically a drop-in replacement to the normal sub-query.
+
+Syntax For The SQL WITH Clause
+
+The following is the syntax of the SQL WITH clause when using a single sub-query alias.
+
+WITH <alias_name> AS (sql_subquery_statement)
+SELECT column_list FROM <alias_name>[,table_name]
+[WHERE <join_condition>]
+When using multiple sub-query aliases, the syntax is as follows.
+
+WITH <alias_name_A> AS (sql_subquery_statement),
+<alias_name_B> AS(sql_subquery_statement_from_alias_name_A
+or sql_subquery_statement )
+SELECT <column_list>
+FROM <alias_name_A>, <alias_name_B> [,table_names]
+[WHERE <join_condition>]
