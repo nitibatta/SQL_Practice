@@ -1,10 +1,5 @@
-Alter table USSALES
-add location varchar(2);
-ALter table EUSALES
-add location varchar(2);
-
-select id, name, price,card_name,card_number,transaction_date, location
+select id, name, price,card_name,card_number,transaction_date, 'US' as location
 from ussales where price >50
 UNION ALL
-Select id,name,price,card_name,card_number,transaction_date,location
+Select id,name,price,card_name,card_number,transaction_date, 'EU' aslocation
 from eusales where price >50
