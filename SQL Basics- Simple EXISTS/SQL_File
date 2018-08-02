@@ -1,4 +1,4 @@
 SELECT departments.id,departments.name 
 FROM departments 
 WHERE EXISTS 
-(SELECT department_id FROM sales WHERE price>98)
+(SELECT department_id FROM sales  where departments.id=sales.department_id and price>98)
