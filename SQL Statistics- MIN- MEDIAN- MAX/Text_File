@@ -1,0 +1,28 @@
+Kata link: https://www.codewars.com/kata/sql-statistics-min-median-max/train/sql
+
+
+
+
+For this challenge you need to create a simple SELECT statement. Your task is to calculate the MIN, MEDIAN and MAX scores of the students from the results table.
+
+Tables and relationship below:
+
+Student Table:
+Id
+Name
+
+Result:
+Id
+Student_id
+Score
+
+Resultant table:
+min
+median
+max
+
+To calculate median in Postgresql:
+Link: https://www.compose.com/articles/metrics-maven-meet-in-the-middle-median-in-postgresql/
+
+I have used the percentile_cont option i.e opion 4
+
