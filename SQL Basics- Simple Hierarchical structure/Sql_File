@@ -1,0 +1,11 @@
+with recursive employee_levels
+AS
+(Select id,first_name,last_name,manager_id,1 as level 
+from employees 
+where manager_id is null
+UNION ALL
+Select employees.id, employees.first_name,employees.last_name,employees.manager_id,level+1 
+from employee_levels
+inner join employees
+on employees.manager_id=employee_levels.id)
+select * from employee_levels;
